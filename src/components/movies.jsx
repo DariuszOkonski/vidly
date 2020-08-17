@@ -18,7 +18,7 @@ class Movies extends Component {
         this.setState({
             movies
         })
-    }
+    } 
     
     render() {
         const {length: count} = this.state.movies;
