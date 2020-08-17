@@ -6,7 +6,7 @@ import Pagination from './common/pagination'
 class Movies extends Component {
     state = {  
         movies: [],
-        pageSize: 4
+        pageSize: 10
     }
     
     componentDidMount() {
