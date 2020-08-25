@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-class Like extends Component {    
-    render() { 
+const Like = (props) => {    
         let classes = "fa fa-heart";
-        if(!this.props.liked)
+        if(!props.liked)
             classes += "-o";
 
         return ( 
@@ -11,10 +10,9 @@ class Like extends Component {
                 className={classes} 
                 aria-hidden="true" 
                 style={{cursor: 'pointer'}}
-                onClick={this.props.onClick}
+                onClick={props.onClick}
             ></i>
          );
-    }
 }
  
 export default Like;
