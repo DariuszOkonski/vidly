@@ -6,7 +6,6 @@ const ListGroup = (props) => {
 
     return ( 
         <ul className="list-group">
-            {/* <li className="list-group-item active">Hello</li> */}
             {
                 items.map(item => 
                     <li
