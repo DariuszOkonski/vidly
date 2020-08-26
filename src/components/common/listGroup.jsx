@@ -19,6 +19,11 @@ const ListGroup = (props) => {
      );
 }
 
+ListGroup.defaultProps = {
+    textProperty: 'name', 
+    valueProperty: '_id'
+}
+
 ListGroup.propTypes = { 
     items: PropTypes.array.isRequired, 
     onItemSelect: PropTypes.func.isRequired,
