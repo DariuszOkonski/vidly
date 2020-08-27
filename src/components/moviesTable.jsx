@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Like from './common/like';
-import TableHeader from './common/tableHeader';
-import TableBody from './common/tableBody';
+import Table from './common/table';
 
 class MoviesTable extends Component {
     columns = [
@@ -24,18 +23,12 @@ class MoviesTable extends Component {
         const { movies, sortColumn, onSort} = this.props;        
     
         return (  
-            <table className="table">
-                <TableHeader 
-                    columns={this.columns} 
-                    sortColumn={sortColumn} 
-                    onSort={onSort} 
-                />
-
-                <TableBody
-                    columns={this.columns}
-                    data={movies}
-                />
-        </table>
+            <Table
+                columns={this.columns}
+                data={movies} 
+                sortColumn={sortColumn} 
+                onSort={onSort}
+            />
         );
     }
 }
@@ -44,7 +37,8 @@ MoviesTable.propTypes = {
     movies: PropTypes.array.isRequired,
     onLike: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
-    onSort: PropTypes.func.isRequired
+    onSort: PropTypes.func.isRequired,
+    sortColumn: PropTypes.object.isRequired,
 }
  
 export default MoviesTable;
