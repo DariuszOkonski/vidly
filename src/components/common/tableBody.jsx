@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 class TableBody extends Component {
-
     renderCall = (item, column) => {
         if(column.content)
             return column.content(item);
@@ -30,6 +30,11 @@ class TableBody extends Component {
             </tbody>
          );
     }
+}
+
+TableBody.propTypes = {
+    data: PropTypes.array.isRequired,
+    columns: PropTypes.array.isRequired
 }
  
 export default TableBody;
