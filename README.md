@@ -1,2 +1,2 @@
 ### Demo
-https://dariuszokonski.github.io/vidly
+https://dariuszokonski.github.io/vidly/
