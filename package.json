@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dariuszokonski.github.io/vidly",
+  "homepage": "https://dariuszokonski.github.io/vidly/",
   "name": "vidly",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
