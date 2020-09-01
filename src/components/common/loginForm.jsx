@@ -4,7 +4,7 @@ import Joi from 'joi-browser';
 
 class LoginForm extends Component {
     state = {
-        account: {
+        data: {
             username: '',
             password: ''
         },
@@ -18,7 +18,7 @@ class LoginForm extends Component {
 
     validate = () => {
         const options = { abortEarly: false };
-        const { error } = Joi.validate(this.state.account, this.schema, options);
+        const { error } = Joi.validate(this.state.data, this.schema, options);
 
         if(!error)
             return null;
@@ -63,17 +63,17 @@ class LoginForm extends Component {
         else
             delete errors[input.name];
 
-        const account = {...this.state.account};
-        account[input.name] = input.value;
+        const data = {...this.state.data};
+        data[input.name] = input.value;
 
         this.setState({
-            account,
+            data,
             errors
         })
     }
 
     render() { 
-        const { account, errors } = this.state;
+        const { data, errors } = this.state;
 
         return ( 
             <div className="container">
@@ -81,7 +81,7 @@ class LoginForm extends Component {
                     <Input
                         name="username"
                         label="Username:"
-                        value={account.username}
+                        value={data.username}
                         onChange={this.handleChange}
                         error={errors.username}
                     />
@@ -89,7 +89,7 @@ class LoginForm extends Component {
                     <Input 
                         name="password"
                         label="Password:"
-                        value={account.password}
+                        value={data.password}
                         onChange={this.handleChange}
                         error={errors.password}
                     />
